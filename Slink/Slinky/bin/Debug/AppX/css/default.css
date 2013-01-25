@@ -1,0 +1,325 @@
+﻿h1 {
+    font-size:3em !important;
+}
+h2 {
+    font-size:2.2em;
+}
+h3 {
+    font-size:1.5em;
+}
+h4 {
+
+}
+
+.a-button, .a-button:hover, .a-button:active, .a-button:visited {
+    font-size:1.1em;
+    cursor:pointer;
+}
+
+::selection {
+    background-color:#34b0be !important;
+}
+
+a, a:hover, a:active, a:visited {
+    color: #34b0be !important;
+    outline:0;
+}
+a h4 {
+    color: #34b0be !important;
+}
+
+#contenthost {
+    height: 100%;
+    width: 100%;
+    background-color:#e8f0df;
+    color:#000000;
+    font-family:helvetica, Arial, sans-serif;
+}
+
+body{ height:100% }
+
+#shadow-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1 !important;
+    background-color: black;
+    opacity: 0.6;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+}
+  
+
+#shadow-overlay.hide {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+}
+
+
+#message-pane {
+    position: absolute;
+    display: block;
+    width: 100%; 
+    height: 18%;
+    opacity: 1;
+    top: 35%;
+    bottom: 55%;
+    z-index: 25000;
+    background-color: #FFF;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    text-align: center;
+    padding: 5% 0;
+}
+
+#message-pane.hide {
+    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+}
+
+#message-pane h2 {
+    padding-bottom: 10px;    
+}
+
+.cl {
+    clear:both;
+    height:0;
+    line-height:0;
+}
+
+.left {
+    float:left;
+}
+
+.right {
+    float:right;
+}
+
+.color-stripe {
+    position:absolute;
+    top:0;
+    height:5px;
+    width:100%;
+}
+.color-stripe.blue {
+    background-color:#34b0be;
+}
+.color-stripe.yellow {
+    background-color:#f3a51d;
+}
+
+.hide, #message-pane.hide {
+    display: none;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 225px 1fr;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment header[role=banner] {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 120px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin-left: 39px;
+            margin-top: 59px;
+        }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 2;
+            margin-top: 75px;
+        }
+
+            .fragment header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+            }
+
+
+
+    .fragment .griddy {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 120px 1fr;
+        -ms-grid-rows: 1fr;
+        -ms-grid-row:2;
+        display: -ms-grid;
+    }
+
+        .fragment .griddy section{
+            -ms-grid-column: 2;
+    }
+
+@media screen and (-ms-view-state: snapped) {
+
+    .fragment .griddy {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 290px 1fr !important;
+    }
+
+    .fragment .griddy section{
+        -ms-grid-column: 1;
+    }
+
+    .fragment header[role=banner] {
+        -ms-grid-columns: auto 1fr;
+        margin-left: 20px;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin: 0;
+            margin-right: 10px;
+            margin-top: 76px;
+        }
+
+            .fragment header[role=banner] .win-backbutton:disabled {
+                display: none;
+            }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 2;
+            margin-left: 0;
+            margin-top: 68px;
+        }
+
+        .item {
+	        border:0px #CCC solid;
+            width: 220px !important; 
+            height: 120px;
+	        position:relative;
+            background-color:#D1D8CB;
+            margin-left: 15px;
+        }
+
+        .fragment .griddy {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 120px 1fr;
+        -ms-grid-rows: 1fr;
+        -ms-grid-row:2;
+        display: -ms-grid;
+    }
+
+        .left {
+        float:none;
+    }
+        
+}   
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .fragment header[role=banner] {
+        -ms-grid-columns: 100px 1fr;
+    }
+
+        .fragment header[role=banner] .win-backbutton {
+            margin-left: 29px;
+        }
+}
+
+
+.itemslist {
+	height:100% !important;
+}
+
+.item {
+	border:0px #CCC solid;
+    width: 350px; 
+    height: 160px;
+	position:relative;
+    background-color:#D1D8CB;
+}
+
+    .item:hover {
+        opacity:1;
+        color:#FFFFFF;
+        background-color:#34b0be;
+    }
+
+.item .item-overlay {
+	background-color:#000;
+	opacity:.6;
+	color:#FFF;
+	display:block;
+	width:100%;
+	padding:10px;
+	position:absolute;
+	bottom:0;
+}
+
+    .item:hover .item-overlay {
+        opacity:.85;
+    }
+
+
+.item .item-date {
+	font-weight:bold;
+    font-size:.8em;
+	position:absolute;
+	bottom:10px;
+	right:10px;
+    color:#000;
+}
+
+.saveToListItem {
+    padding: 20px;
+    width: 150px;
+}
+
+.topAppbarListContainer {
+    height: 110px;
+    width: calc(100% - 200px);
+    padding: 10px;
+}
+
+.topAppbarListItem {
+    width: 100px;
+    height: 60px;
+    text-align:center;
+    padding-top: 35px;
+    font-weight: bold;
+}
+
+.create-list-app-command {
+    float:right;
+    margin-top: 20px !important;
+}
+
+.win-appbar {
+  background-color: rgba(52, 176, 190, .5);
+}
+
+.list-subheading {
+    font-size:24px; 
+    margin-left: 15px; 
+    position:relative;
+    top:-5px; 
+    color: #f1;
+    font-weight: lighter;
+}
+
+#topAppBar .win-selectionborder, #SaveToLists .win-selectionborder {
+    border-color: #ee3a5a;
+}
+
+#topAppBar .win-selectioncheckmarkbackground, #SaveToLists .win-selectioncheckmarkbackground {
+    border-top-color: #ee3a5a;
+    border-right-color: #ee3a5a;
+}

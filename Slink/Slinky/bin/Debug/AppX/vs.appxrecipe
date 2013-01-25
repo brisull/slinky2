@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>RGA-VM</Machine>
+    <WindowsUser>Brian</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>BBA76E5B092CFADA37AB999B0F4325239FB6FF4D19D563A7AE26E6C5564257ED</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>e27a175d-caba-415a-9988-b61eba25f725_1.0.0.0_neutral__f5cr6ccw4sfca</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>e27a175d-caba-415a-9988-b61eba25f725_f5cr6ccw4sfca!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>e27a175d-caba-415a-9988-b61eba25f725</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Tony</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\dev\Slinky\Slinky\Slinky\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-04T20:03:54.971</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\Sources\Facebook.js">
+      <PackagePath>core\Sources\Facebook.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.745</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\configuration\Settings.js">
+      <PackagePath>core\configuration\Settings.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.579</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\Helpers.js">
+      <PackagePath>core\Helpers.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.503</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\persistence\Adapter.js">
+      <PackagePath>core\persistence\Adapter.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.597</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\persistence\enums\SourceType.js">
+      <PackagePath>core\persistence\enums\SourceType.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.577</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\persistence\models\Link.js">
+      <PackagePath>core\persistence\models\Link.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.597</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\persistence\models\LinkDetail.js">
+      <PackagePath>core\persistence\models\LinkDetail.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.989</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\persistence\models\List.js">
+      <PackagePath>core\persistence\models\List.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.648</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\persistence\models\Source.js">
+      <PackagePath>core\persistence\models\Source.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.631</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\persistence\value\LinksSort.js">
+      <PackagePath>core\persistence\value\LinksSort.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.727</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\core\persistence\value\LinksFilter.js">
+      <PackagePath>core\persistence\value\LinksFilter.js</PackagePath>
+      <Modified>2012-12-04T20:02:51.680</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\js\data.js">
+      <PackagePath>js\data.js</PackagePath>
+      <Modified>2012-12-04T20:02:52.023</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-12-04T20:02:52.708</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\js\navigator.js">
+      <PackagePath>js\navigator.js</PackagePath>
+      <Modified>2012-12-04T20:02:52.592</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\pages\detail\detail.js">
+      <PackagePath>pages\detail\detail.js</PackagePath>
+      <Modified>2012-12-04T20:02:52.170</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\pages\list\list.js">
+      <PackagePath>pages\list\list.js</PackagePath>
+      <Modified>2012-12-04T20:02:52.159</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-12-04T20:02:51.450</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\pages\detail\detail.html">
+      <PackagePath>pages\detail\detail.html</PackagePath>
+      <Modified>2012-12-04T20:02:52.105</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\pages\list\list.html">
+      <PackagePath>pages\list\list.html</PackagePath>
+      <Modified>2012-12-04T20:02:52.143</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-04T20:02:51.860</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\images\logo_top.png">
+      <PackagePath>images\logo_top.png</PackagePath>
+      <Modified>2012-12-04T20:02:51.888</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\images\logo_top_100.png">
+      <PackagePath>images\logo_top_100.png</PackagePath>
+      <Modified>2012-12-04T20:02:51.866</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\images\logo_top_75.png">
+      <PackagePath>images\logo_top_75.png</PackagePath>
+      <Modified>2012-12-04T20:02:51.913</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\images\logo_top_85.png">
+      <PackagePath>images\logo_top_85.png</PackagePath>
+      <Modified>2012-12-04T20:02:51.881</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-04T20:02:51.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-04T20:02:52.016</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-04T20:02:52.004</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-12-04T20:02:51.749</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\pages\detail\detail.css">
+      <PackagePath>pages\detail\detail.css</PackagePath>
+      <Modified>2012-12-04T20:02:52.615</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\pages\list\list.css">
+      <PackagePath>pages\list\list.css</PackagePath>
+      <Modified>2012-12-04T20:02:52.161</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\dev\Slinky\Slinky\Slinky\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-12-04T20:03:54.456</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.8514.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.8514.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

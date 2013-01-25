@@ -1,0 +1,40 @@
+﻿.list p {
+    margin-left: 120px;
+}
+
+.item {
+    padding:20px;
+}
+
+.item .left.copy-col {
+    width:60%;
+}
+
+    .item .left.img-col {
+    
+        width:100px;
+
+    }
+
+.item-image-list {
+    max-width:75px;
+    max-height:75px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .item .left.copy-col {
+    width:60%;
+}
+
+    .item .left.img-col {
+    
+        width:100px;
+
+    }
+
+.item-image-list {
+    max-width:75px;
+    max-height:75px;
+}
+
+}

@@ -1,0 +1,121 @@
+﻿//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+//// PARTICULAR PURPOSE.
+////
+//// Copyright (c) Microsoft Corporation. All rights reserved
+
+(function () {
+    "use strict";
+
+    var authzInProgress = false;
+
+    //Slinky.Core.Sources.Facebook.accessToken
+    //Slinky.Core.Sources.Facebook.connect()
+
+    WinJS.Namespace.define("Slinky.Core.Sources", {
+
+        Facebook: {
+
+            accessToken: null, 
+
+            isValidUriString: function(uriString) {
+                var uri = null;
+                try {
+                    uri = new Windows.Foundation.Uri(uriString);
+                }
+                catch (err) {
+                }
+                return uri !== null;
+            },
+
+            extractQuerystring: function(a) {
+                if (a == "") return {};
+                var b = {};
+                for (var i = 0; i < a.length; ++i) {
+                    var p = a[i].split('=');
+                    if (p.length != 2) continue;
+                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                }
+                return b;
+            },
+
+            launchFacebookWebAuth: function () {
+                
+                var facebookURL = "https://www.facebook.com/dialog/oauth?client_id=";
+
+                var clientID = "490046841035318";
+                if (clientID === null || clientID === "") {
+                    WinJS.log("Enter a ClientID", "Web Authentication SDK Sample", "error");
+                    return;
+                }
+
+                var callbackURL = "https://www.facebook.com/connect/login_success.html";
+                if (!Slinky.Core.Sources.Facebook.isValidUriString(callbackURL)) {
+                    WinJS.log("Enter a valid Callback URL for Facebook", "Web Authentication SDK Sample", "error");
+                    return;
+                }
+
+                facebookURL += clientID + "&redirect_uri=" + encodeURIComponent(callbackURL) + "&scope=read_stream&display=popup&response_type=token";
+
+                if (authzInProgress) {
+                    console.log("Authorization already in Progress ...");
+                    return;
+                }
+
+                var startURI = new Windows.Foundation.Uri(facebookURL);
+                var endURI = new Windows.Foundation.Uri(callbackURL);
+
+                
+                authzInProgress = true;
+                Windows.Security.Authentication.Web.WebAuthenticationBroker.authenticateAsync(
+                    Windows.Security.Authentication.Web.WebAuthenticationOptions.none, startURI, endURI)
+                    .done(function (result) {
+                        console.log(result.responseData);
+                        console.log("Status returned by WebAuth broker: " + result.responseStatus);
+                        
+                        // Stolen from sdk
+                        var parser = document.createElement('a');
+                        parser.href = result.responseData;
+
+                        var qs = Slinky.Core.Sources.Facebook.extractQuerystring(parser.hash.substr(1).split('&'));
+
+                        if (qs.error) {
+                            // most likely user clicked don't allow
+                            console.log('error: ' + qs.error + ' : ' + qs.error_description);
+                            return;
+                        }
+
+                        // we now have the access token,
+
+                        // set it as the default access token.
+                        Slinky.Core.Sources.Facebook.accessToken = qs.access_token;
+
+                        // save it in local storage so can access it later
+                        localStorage.setItem('fb_access_token', Slinky.Core.Sources.Facebook.accessToken);
+
+                        // now navigate to home page
+                        WinJS.Navigation.navigate('/pages/items/items.html');
+
+
+                        // end stolen
+
+                        if (result.responseStatus === Windows.Security.Authentication.Web.WebAuthenticationStatus.errorHttp) {
+                            console.log("Error returned: " + result.responseErrorDetail);
+                        }
+                        authzInProgress = false;
+                    }, function (err) {
+                        WinJS.log("Error returned by WebAuth broker: " + err, "Web Authentication SDK Sample", "error");
+                        console.log("Error Message: " + err.message);
+                        authzInProgress = false;
+                    });
+            },
+            
+            getLinks: function() {
+                if (!this.accessToken) {
+                    console.log("no token");
+                }
+            }
+        }
+    })
+    })();

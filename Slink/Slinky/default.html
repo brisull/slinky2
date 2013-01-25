@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Slinky</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- Slinky references -->
+    <link href="/css/default.css" rel="stylesheet" />
+
+    <!-- database stuff -->
+    <script src="/core/persistence/enums/SourceType.js"></script>
+    <script src="/core/persistence/models/Link.js"></script>
+    <script src="/core/persistence/models/LinkDetail.js"></script>
+    <script src="/core/persistence/models/List.js"></script>
+    <script src="/core/persistence/models/Source.js"></script>
+    <script src="/core/persistence/value/LinksFilter.js"></script>
+    <script src="/core/persistence/value/LinksSort.js"></script>
+    <script src="/core/persistence/Adapter.js"></script>
+
+    <script src="/core/Helpers.js"></script>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/navigator.js"></script>
+
+</head>    <script src="/js/default.js"></script>
+    <script src="/core/Sources/Facebook.js"></script>
+
+<body>
+
+
+    <div id="shadow-overlay" class="hide"></div>
+
+    <div id="message-pane" class="hide">
+        <h2 id="message_pane_header">Getting your links</h2>
+        <h4 id="message_pane_sub">This may take a moment...</h4>
+    </div>
+    
+    <progress id="progress-bar" class="progress hide" style="width: 100%;"></progress>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/list/list.html'}"></div>
+
+    <progress class="progress hide" style="width: 100%;"></progress>
+
+    <div id="appBarListTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-bind="innerText:name" class="topAppbarListItem"></div>
+    </div>
+    <div id="flyCreateList" data-win-control="WinJS.UI.Flyout">
+        <h3>Create a List</h3>
+        <br />
+        <input type="text" id="newListName" />
+        <br /><button id="btnCreateList" style="float:right">Create</button>
+    </div>
+    <div id="topAppBar" data-win-control="WinJS.UI.AppBar" data-win-options="{layout:'custom',placement:'top'}">
+        
+        
+        <div id="appBarList" data-win-control="WinJS.UI.ListView" data-win-options="{ itemTemplate: select('#appBarListTemplate'),
+            tapBehavior: 'directSelect',
+            layout: {type: WinJS.UI.GridLayout}}" class="topAppbarListContainer">
+
+        </div>
+        
+    </div>
+
+    
+    <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'Nuke', label:'Nuke', icon:'delete', section:'selection'}" type="button"></button>
+        
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'fblogin', label:'FB Login', icon:'addfriend'}" type="button"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'fblogout', label:'FB Logout', icon:'blockcontact'}" type="button"></button>
+
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'SaveToList',
+             label:'Save To List',
+            icon:'newfolder',
+            extraClass:'itemdetail',
+            type:'flyout',
+            flyout: select('#flySaveToList') }"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'GetFBLinks', label:'Sync FB Data', icon:'repeatall'}" type="button"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'OpenPage', label:'Open Page', icon:'right',section:'selection',extraClass:'itemdetail'}" type="button"></button>
+        <button id="createlistcommand" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'CreateList', label:'Create List', icon:'add',
+            type:'flyout',
+            flyout: select('#flyCreateList')}"></button>
+    </div>
+
+    <div id="flyoutSaveToListTemplate" data-win-control="WinJS.Binding.Template">
+            <div data-win-bind="innerText: name" class="saveToListItem"></div>
+        </div>
+    <!-- Fly outs -->
+    <div id="flySaveToList" data-win-control="WinJS.UI.Flyout">
+        
+        <div id="SaveToLists" aria-label="Save To Lists" data-win-control="WinJS.UI.ListView"
+            data-win-options="{ itemTemplate: select('#flyoutSaveToListTemplate'),
+            tapBehavior: 'toggleSelect' }"></div>
+    </div>
+
+</body>
+</html>
